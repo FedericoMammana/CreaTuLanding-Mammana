@@ -1,0 +1,18 @@
+.nav-container {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-align: center;
+  background-color: #dc5f00;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.anchor-nav {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+.anchor-nav img {
+  width: 100px;
+  height: 100px;
+}
