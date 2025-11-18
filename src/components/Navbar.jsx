@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="nav-container">
       <a className="anchor-nav" href="">
-        <img src="../warriors-logo-nue.png" alt="logo" />
+        <img src="../logo-steel-store.png" alt="logo" />
       </a>
       <a className="anchor-nav" href="">
         Nuevos Ingresos
