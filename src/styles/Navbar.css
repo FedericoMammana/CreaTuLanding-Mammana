@@ -12,6 +12,12 @@
   text-decoration: none;
   text-align: center;
 }
+.active {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
 .anchor-nav img {
   width: 100px;
   height: 100px;

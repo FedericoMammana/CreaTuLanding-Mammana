@@ -9,6 +9,7 @@ export const ItemList = ({ data }) => {
         justifyContent: "space-around",
         alignItems: "center",
         flexWrap: "wrap",
+        marginBottom: "30px",
       }}
     >
       {data.map((prod) => (
