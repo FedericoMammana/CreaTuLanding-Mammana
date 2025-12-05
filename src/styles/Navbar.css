@@ -1,7 +1,7 @@
 .nav-container {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-align: center;
-  background-color: #dc5f00;
+  background-color: #352f44;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -10,10 +10,15 @@
   color: white;
   cursor: pointer;
   text-decoration: none;
+  display: flex;
   text-align: center;
+  align-items: center;
+}
+.anchor-nav:hover {
+  transition: all 0.3s ease-out;
 }
 .active {
-  color: blue;
+  color: #b9b4c7;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;

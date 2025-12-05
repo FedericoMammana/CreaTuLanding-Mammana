@@ -1,5 +1,9 @@
 .card {
+  margin-top: 20px;
   margin-bottom: 30px;
+  outline: 3px solid #5c5470;
+  outline-offset: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .card-img,
 .card-img-top {

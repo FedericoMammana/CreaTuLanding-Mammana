@@ -1,8 +1,10 @@
-const CartWidget = (props) => {
+const CartWidget = ({ counter }) => {
+  // console.log(props)
+  // const {counter}= props
   return (
     <div>
       <span>🛒</span>
-      <span style={{ color: "blue" }}>{props.counter}</span>
+      <span style={{ color: "red" }}>{counter}</span>
     </div>
   );
 };
