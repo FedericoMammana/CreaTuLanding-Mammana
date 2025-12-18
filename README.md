@@ -18,10 +18,10 @@ Utilicé como temática una tienda de productos relacionados a Magic The Gatheri
 
 Las librerias que utilicé en este proyecto fueron:
 
-[Firebase](https://firebase.google.com/): Utilizado como base de datos.
-[React Router Dom](https://reactrouter.com/home): Utilizado para la navegación por rutas.
-[React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction): Utilazado para el styling del proyecto.
-[React Icons](https://react-icons.github.io/react-icons/): Utilizado para los íconos del proyecto.
+- [Firebase](https://firebase.google.com/): Utilizado como base de datos.
+- [React Router Dom](https://reactrouter.com/home): Utilizado para la navegación por rutas.
+- [React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction): Utilazado para el styling del proyecto.
+- [React Icons](https://react-icons.github.io/react-icons/): Utilizado para los íconos del proyecto.
 
 ### Funcionalidad 🚀
 
