@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { getProducts, products } from "../mock/AsyncMock";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-// agrego el loader
 import LoaderComponent from "./LoaderComponent";
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../service/firebase";
@@ -33,40 +31,12 @@ const ItemListContainer = (props) => {
             ...doc.data(),
           };
         });
-        // console.log(list)
+
         setData(list);
       })
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [type]);
-
-  // useEffect(() => {
-  //   //seteo el loading en true
-  //   setLoading(true);
-  //   //pido los datos
-  //   getProducts() //retorna la promise
-  //     .then((res) => {
-  //       if (type) {
-  //         //filtramos
-  //         setData(res.filter((prod) => prod.category === type));
-  //       } else {
-  //         //si no existe la categoria devolvemos todo
-  //         setData(res);
-  //       }
-  //     })
-  //     .catch((error) => console.log(error)) //atrapar el error
-  //     .finally(() => setLoading(false));
-  //   // agrego el finally con el setLoading
-
-  //   //NO NOS OLVIDEMOS DEL TYPE PORQUE ROMPO TODO
-  // }, [type]);
-
-  //SE BORRA!!!!!
-  // const subirData = () => {
-  //   console.log("Subiendo data...");
-  //   const collSubir = collection(db, "items");
-  //   products.map((prod) => addDoc(collSubir, prod));
-  // };
 
   return (
     <>

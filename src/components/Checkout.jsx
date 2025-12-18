@@ -57,7 +57,9 @@ const Checkout = () => {
         <div>
           <h2>Muchas gracias por su compra</h2>
           <h4>Su comprobante de orden es: {orderId}</h4>
-          <h4>A nombre de: {buyer.name}</h4>
+          <h4>
+            A nombre de: {buyer.name} {buyer.lastname}
+          </h4>
           <Link className="btn btn-dark" to="/">
             Volver a Home
           </Link>

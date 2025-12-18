@@ -1,9 +1,31 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import EmptyCart from "./EmptyCart";
 
 const CartView = () => {
   const { cart, removeItem, clear, total } = useContext(CartContext);
+  const preConfirm = () => {
+    Swal.fire({
+      icon: "question",
+      title: "¿Seguro quiere eliminar el carrito?",
+      showDenyButton: true,
+      denyButtonText: "No",
+      confirmButtonText: "Si",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Se eliminó el carrito");
+        clear();
+        return <EmptyCart />;
+      } else if (result.isDenied) {
+        Swal.fire("Eliminacion Cancelada. Puede seguir comprando!");
+      }
+    });
+  };
+  if (!cart.length) {
+    return <EmptyCart />;
+  }
   return (
     <div>
       <h1>Tu carrito 🛒</h1>
@@ -37,7 +59,6 @@ const CartView = () => {
           </div>
         ))}
       </div>
-      {/* crear una funcion que recorra todo el array y de un solo resultado */}
       <span>Total a pagar:${total()},00 </span>
       <div
         style={{
@@ -48,7 +69,7 @@ const CartView = () => {
           padding: "2rem",
         }}
       >
-        <button className="btn btn-danger" onClick={clear}>
+        <button className="btn btn-danger" onClick={preConfirm}>
           Vaciar carrito
         </button>
         <Link className="btn btn-success" to="/checkout">
