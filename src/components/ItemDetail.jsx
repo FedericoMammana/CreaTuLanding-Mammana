@@ -40,12 +40,3 @@ const ItemDetail = ({ detalle }) => {
 };
 
 export default ItemDetail;
-{
-  /* OLD CARD
-       <div className="detail-prod">
-        <img src={detalle.img} alt={detalle.name} />
-        <p>Precio: ${detalle.price},00</p>
-        <p>{detalle.description}</p>
-        <p>Stock disponible: {detalle.stock} unidades</p>
-      </div> */
-}

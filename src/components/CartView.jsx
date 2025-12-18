@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 const CartView = () => {
-  const { cart, removeItem, clear } = useContext(CartContext);
+  const { cart, removeItem, clear, total } = useContext(CartContext);
   return (
     <div>
       <h1>Tu carrito 🛒</h1>
@@ -25,8 +26,8 @@ const CartView = () => {
             />
             <span>{compra.name}</span>
             <span>${compra.price},00</span>
-            <span>cantidad:{compra.quantity}</span>
-            <span>precio final: ${compra.quantity * compra.price},00</span>
+            <span>Cantidad: {compra.quantity}</span>
+            <span>Precio final: ${compra.quantity * compra.price},00</span>
             <button
               className="btn btn-danger"
               onClick={() => removeItem(compra.id)}
@@ -37,7 +38,7 @@ const CartView = () => {
         ))}
       </div>
       {/* crear una funcion que recorra todo el array y de un solo resultado */}
-      <span>Total a pagar: </span>
+      <span>Total a pagar:${total()},00 </span>
       <div
         style={{
           display: "flex",
@@ -50,7 +51,9 @@ const CartView = () => {
         <button className="btn btn-danger" onClick={clear}>
           Vaciar carrito
         </button>
-        <button className="btn btn-success">Terminar Compra</button>
+        <Link className="btn btn-success" to="/checkout">
+          Terminar Compra
+        </Link>
       </div>
     </div>
   );

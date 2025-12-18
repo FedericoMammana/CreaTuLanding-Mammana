@@ -11,6 +11,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("carrito", JSON.stringify(cart));
   }, [cart]);
 
+  // OJO CON ESTE CONSOLE LOG PREGUNTAR
   console.log(cart, "carrito");
   //agregar un item al carrito, contempla duplicados
   const addItem = (item, qty) => {
@@ -48,9 +49,13 @@ export const CartProvider = ({ children }) => {
   };
 
   //total a pagar
-  const total = () => {};
+  const total = () => {
+    return cart.reduce((acc, prod) => (acc += prod.quantity * prod.price), 0);
+  };
   //total a items En el carrito (sumatoria de cantidades)
-  const cartQuantity = () => {};
+  const cartQuantity = () => {
+    return cart.reduce((acc, prod) => (acc += prod.quantity), 0);
+  };
 
   //OPCIONAL
   const itemQuantity = (id) => {
@@ -68,7 +73,15 @@ export const CartProvider = ({ children }) => {
   // const cajitaDeHerramientas = {}
   return (
     <CartContext.Provider
-      value={{ cart, clear, removeItem, addItem, itemQuantity }}
+      value={{
+        cart,
+        clear,
+        removeItem,
+        addItem,
+        itemQuantity,
+        total,
+        cartQuantity,
+      }}
     >
       {children}
     </CartContext.Provider>

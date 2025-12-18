@@ -1,16 +1,39 @@
-# React + Vite
+# Steel Store App 🛒 ☀️💧🔥🥬💀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto fue diseñado para enseñar las bases de React
+Utilicé como temática una tienda de productos relacionados a Magic The Gathering
 
-Currently, two official plugins are available:
+![SteelStore](./public/steelstore.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Instalación 🔧⚙️
 
-## React Compiler
+- Requisito técnico: Contar con Node v20 o superior instalado en la PC. \*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone el repositorio
+2. Hacer el comando `cd warriors-react-proyect` para moverse a la carpeta raiz del proyecto.
+3. Instalar dependencias con el comando `npm install`.
+4. Para levantar el proyecto de manera local ejecute el comando `npm run dev`
 
-## Expanding the ESLint configuration
+### Librerias 📒📘📕📗📓
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Las librerias que utilicé en este proyecto fueron:
+
+[Firebase](https://firebase.google.com/): Utilizado como base de datos.
+[React Router Dom](https://reactrouter.com/home): Utilizado para la navegación por rutas.
+[React Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction): Utilazado para el styling del proyecto.
+[React Icons](https://react-icons.github.io/react-icons/): Utilizado para los íconos del proyecto.
+
+### Funcionalidad 🚀
+
+El proyecto es una tienda de productos relacionados al TCG (Trading Card Game) conocido como
+Magic The Gathering.
+En la misma podrás realizar compras de mazos preconstruidos del formato Commander y Accesorios para las cartas.
+Se puede también adicionar diferentes cantidades de productos así como también eliminarlos.
+Una vez realizada la compra, debemos llenar un formulario que nos genera una orden de compra con un comprobante y a nombre de quién está el pedido realizado.
+
+### Comentarios
+
+Como soy un gran fanático del juego opté por cumplir el sueño de muchas tiendas de Arg. que es tener
+su propia página.
+La verdad disfruté mucho realizando esta app así como también de las clases recibidas.
+Muchas gracias por este gran curso, por la paciencia y disposición.
